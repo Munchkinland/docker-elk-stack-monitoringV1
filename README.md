@@ -1,5 +1,7 @@
 # Docker ELK Stack Monitoring
 
+![f2f2ca74-c2b6-44cd-911d-24dd66be8a9a](https://github.com/user-attachments/assets/53fdbd04-597c-4b44-bce7-5245316e1d33)
+
 ## Overview
 
 This project sets up a comprehensive monitoring solution using Docker, the Elastic Stack (ELK Stack), and Beats. It includes services for Elasticsearch, Kibana, Heartbeat, Metricbeat, and Portainer, along with a sample Python application for testing.
