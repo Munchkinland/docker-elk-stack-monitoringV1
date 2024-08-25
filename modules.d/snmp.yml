@@ -1,8 +1,0 @@
-- module: snmp
-  metricsets: ["system", "interface"]
-  period: 10s
-  hosts: ["udp://localhost:161"]
-  community: "public"
-  version: "2c"
-  timeout: 10s
-  retries: 3
