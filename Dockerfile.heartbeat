@@ -1,0 +1,10 @@
+FROM docker.elastic.co/beats/heartbeat:8.10.2
+
+# Copia el archivo de configuración al contenedor
+COPY heartbeat.yml /usr/share/heartbeat/heartbeat.yml
+
+# Cambia los permisos del archivo de configuración
+RUN chmod go-w /usr/share/heartbeat/heartbeat.yml
+
+# Establece el punto de entrada
+ENTRYPOINT ["/usr/share/heartbeat/heartbeat", "-e"]

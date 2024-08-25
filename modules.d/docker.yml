@@ -1,0 +1,4 @@
+- module: docker
+  metricsets: ["container"]
+  period: 10s
+  hosts: ["unix:///var/run/docker.sock"]

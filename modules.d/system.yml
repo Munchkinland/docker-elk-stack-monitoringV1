@@ -1,0 +1,4 @@
+- module: system
+  metricsets: ["cpu", "memory", "diskio", "network", "process"]
+  period: 10s
+  processes: ['.*']  # Para recolectar métricas de todos los procesos, o puedes especificar procesos específicos si prefieres

@@ -1,0 +1,131 @@
+# Configuración de Heartbeat con 15 monitores
+
+heartbeat.monitors:
+  # Monitor HTTP para un servicio web local
+  - type: http
+    name: HTTP Monitor for Localhost
+    urls: ["http://localhost:9200"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 10s'
+
+  # Monitor HTTP para un servicio externo
+  - type: http
+    name: HTTP Monitor for Google
+    urls: ["http://www.google.com"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 30s'
+
+  # Monitor TCP para un puerto específico
+  - type: tcp
+    name: TCP Monitor for Port 22
+    hosts: ["localhost:22"]
+    schedule: '@every 1m'
+
+  # Monitor ICMP (Ping) para un host
+  - type: icmp
+    name: ICMP Monitor for Google DNS
+    hosts: ["8.8.8.8"]
+    schedule: '@every 1m'
+
+  # Monitor HTTP de tipo Synthetic (ajustado para utilizar un tipo válido)
+  - type: synthetics/http
+    name: Synthetic HTTP Monitor for Localhost
+    urls: ["http://localhost:9200"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 5m'
+
+  # Monitor HTTP para el sitio de GitHub
+  - type: http
+    name: HTTP Monitor for GitHub
+    urls: ["https://github.com"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+  # Monitor HTTP para el sitio de Elastic
+  - type: http
+    name: HTTP Monitor for Elastic
+    urls: ["https://www.elastic.co"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+  # Monitor TCP para el puerto 80 de un servicio web
+  - type: tcp
+    name: TCP Monitor for Web Port
+    hosts: ["www.example.com:80"]
+    schedule: '@every 1m'
+
+  # Monitor ICMP (Ping) para Cloudflare
+  - type: icmp
+    name: ICMP Monitor for Cloudflare
+    hosts: ["1.1.1.1"]
+    schedule: '@every 1m'
+
+  # Monitor HTTP para el servicio de Wikipedia
+  - type: http
+    name: HTTP Monitor for Wikipedia
+    urls: ["https://www.wikipedia.org"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+  # Monitor HTTP para el sitio de Amazon
+  - type: http
+    name: HTTP Monitor for Amazon
+    urls: ["https://www.amazon.com"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+  # Monitor TCP para el puerto 443 de un servicio web
+  - type: tcp
+    name: TCP Monitor for HTTPS Port
+    hosts: ["www.telefonica.com:443"]
+    schedule: '@every 1m'
+
+  # Monitor ICMP (Ping) para Microsoft
+  - type: icmp
+    name: ICMP Monitor for Microsoft
+    hosts: ["40.76.4.15"]
+    schedule: '@every 1m'
+
+  # Monitor HTTP para el servicio de Twitter
+  - type: http
+    name: HTTP Monitor for Twitter
+    urls: ["https://twitter.com"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+  # Monitor HTTP para el servicio de LinkedIn
+  - type: http
+    name: HTTP Monitor for LinkedIn
+    urls: ["https://www.linkedin.com"]
+    check.request:
+      method: GET
+    check.response:
+      status: 200
+    schedule: '@every 2m'
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
