@@ -78,4 +78,4 @@ Feel free to open issues or submit pull requests if you have suggestions or impr
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 # Contact
-For any questions or feedback, please contact your-email@example.com.
+For any questions or feedback, please feel free to contact me on https://www.linkedin.com/in/rub%C3%A9n-carrasco-143145135/
