@@ -6,7 +6,7 @@
 
 This project sets up a comprehensive monitoring solution using Docker, the Elastic Stack (ELK Stack), and Beats. It includes services for Elasticsearch, Kibana, Heartbeat, Metricbeat, and Portainer, along with a sample Python application for testing.
 
-## Arcquitecture
+## Architecture
 
 ![Elastic Network with Port Descriptions](https://github.com/user-attachments/assets/973a7816-bd15-4159-9db1-2d5271cf5850)
 
